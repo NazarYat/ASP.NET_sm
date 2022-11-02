@@ -21,7 +21,7 @@ namespace ASP.NET_sm.Services
         {
             database = dbcontext;
         }
-        
+        [HttpPost]
         public async Task<IActionResult> Register( string email, string password )
         {
             var users = database.GetUsers( email );
@@ -65,6 +65,7 @@ namespace ASP.NET_sm.Services
 
             return salt;
         }
+        [HttpPost]
         public async Task< IActionResult > DeleteAccount( string email )
         {
             var users = await database.GetUsers( email );
