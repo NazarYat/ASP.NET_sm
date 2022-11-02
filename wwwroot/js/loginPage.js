@@ -129,9 +129,9 @@ async function openMainDivAnimation()
     var startHeight = mainDiv.height();
     var endHeight;
 
-    if ( $( window ).height() > contentHeight )
+    if ( $( window ).height() - 50 > contentHeight )
     {
-        endHeight = $( window ).height() - mainDiv.css( "margin-top" ).replace( 'px', '' );
+        endHeight = $( window ).height() - mainDiv.css( "margin-top" ).replace( 'px', '' ) - 50;
     }
     else {
         endHeight = contentHeight;
