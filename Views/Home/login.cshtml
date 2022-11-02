@@ -1,0 +1,70 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<link rel="stylesheet" href="../css/login.css">
+<script type="text/javascript" src="../js/buttonsEffects.js"></script>
+<script type="text/javascript" src="../js/loginPage.js"></script>
+
+<div id="menuCaseTrigger"
+    onmouseenter="openMenuAnimation()"
+    onmouseleave="closeMenuAnimation()">
+    <div id="menuCase" >
+        <button class="menuButton" id="accountName" style="visibility: visible; width: calc( 100% / 10 ); margin: 0; float: left; width: fit-content;"
+        onclick="deleteAccount( $( this ) )"></button>
+
+        <button class="menuButton" id="deleteAccountButton" style="visibility: visible; width: calc( 100% / 10 ); float: right;"
+        onclick="deleteAccount( $( this ) )"
+        onmouseenter="OnMouseEnterAnimation( $(this) )"
+        onmouseleave="OnMouseLeftAnimation( $(this) )" 
+        onmousedown="OnMouseDown( $(this) )" 
+        onmouseup="OnMouseUp( $(this) )">
+            Delete account
+        </button>
+
+        <button class="menuButton" id="exitButton" style="visibility: visible; width: calc( 100% / 10 ); margin: 0; float: right;"
+        onclick="exit( $( this ) )"
+        onmouseenter="OnMouseEnterAnimation( $(this) )"
+        onmouseleave="OnMouseLeftAnimation( $(this) )" 
+        onmousedown="OnMouseDown( $(this) )" 
+        onmouseup="OnMouseUp( $(this) )">
+            Exit
+        </button>
+
+        <button class="menuButton" id="registerPageButton" style="visibility: collapse; width: calc( 100% / 10 ); margin: 0; float: right;"
+        onclick="location = '../home/register'"
+        onmouseenter="OnMouseEnterAnimation( $(this) )"
+        onmouseleave="OnMouseLeftAnimation( $(this) )" 
+        onmousedown="OnMouseDown( $(this) )" 
+        onmouseup="OnMouseUp( $(this) )">
+            Sign Up
+        </button>
+    </div>
+</div>
+
+<div id="mainDiv">
+    <form method="post" action="../home/login" name="login" id="loginForm" >
+        <input id="emailField" name="login" type="email" placeholder="enter your email"
+            oninput="checkLoginEmail()">
+        <input id="passwordField" name="password" type="password" placeholder="enter your password"
+            oninput="checkPassword()" >
+    </form>
+    <form method="post" action="../home/login" name="loginGuest" id="loginFormGuest" >
+        <input name="login" type="text", value="guest@guest" style="height: 0; visibility: hidden;">
+    </form>
+    <div Id="messageBox">
+    </div>
+    <button value="Sign in" onmouseenter="OnMouseEnterAnimation( $(this) )"
+                            onmouseleave="OnMouseLeftAnimation( $(this) )" 
+                            onmousedown="OnMouseDown( $(this) )" 
+                            onmouseup="OnMouseUp( $(this) )"
+                            onclick="loginButtonClick()" >Sign in</button>
+
+    <button value="Guest" onmouseenter="OnMouseEnterAnimation( $(this) )"
+                          onmouseleave="OnMouseLeftAnimation( $(this) )" 
+                          onmousedown="OnMouseDown( $(this) )" 
+                          onmouseup="OnMouseUp( $(this) )"
+                          onclick="guestButtonClick()" >Guest</button>
+
+</div>
+<img id="loadingCircle" src="../images/loadingCircle.png" >
+<div id="buffer" style="visibility: collapse;" ></div>

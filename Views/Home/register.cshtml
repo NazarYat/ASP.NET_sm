@@ -1,0 +1,31 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<link rel="stylesheet" href="../css/login.css">
+<script type="text/javascript" src="../js/buttonsEffects.js"></script>
+<script type="text/javascript" src="../js/registerPage.js"></script>
+<div id="mainDiv">
+    <form method="post" name="login" id="loginForm" >
+        <input id="emailField" name="login" type="email" placeholder="enter your email"
+            oninput="checkLoginEmail()">
+        <input id="passwordField" name="password" type="password" placeholder="enter your password"
+            oninput="passwordScanner( this.value )" >
+        <input id="repeatPasswordField" name="2password" type="password" placeholder="repeat your password"
+            oninput="checkSecondPassword()" >
+    </form>
+    <div Id="messageBox">
+    </div>
+    <button value="Sign up" onmouseenter="OnMouseEnterAnimation( $(this) )"
+                            onmouseleave="OnMouseLeftAnimation( $(this) )" 
+                            onmousedown="OnMouseDown( $(this) )" 
+                            onmouseup="OnMouseUp( $(this) )"
+                            onclick="registerButtonClick()" >Sign up</button>
+
+    <button value="Sign in" onmouseenter="OnMouseEnterAnimation( $(this) )"
+                          onmouseleave="OnMouseLeftAnimation( $(this) )" 
+                          onmousedown="OnMouseDown( $(this) )" 
+                          onmouseup="OnMouseUp( $(this) )"
+                          onclick="location = '../'" >Sign in</button>
+
+</div>
+<img id="loadingCircle" src="../images/loadingCircle.png" >

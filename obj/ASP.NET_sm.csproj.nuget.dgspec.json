@@ -1,0 +1,78 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\projects\\.net\\ASP.NET_sm\\ASP.NET_sm.csproj": {}
+  },
+  "projects": {
+    "D:\\projects\\.net\\ASP.NET_sm\\ASP.NET_sm.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\projects\\.net\\ASP.NET_sm\\ASP.NET_sm.csproj",
+        "projectName": "ASP.NET_sm",
+        "projectPath": "D:\\projects\\.net\\ASP.NET_sm\\ASP.NET_sm.csproj",
+        "packagesPath": "C:\\Users\\WDSW\\.nuget\\packages\\",
+        "outputPath": "D:\\projects\\.net\\ASP.NET_sm\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\WDSW\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "BCrypt.Net-Next": {
+              "target": "Package",
+              "version": "[4.0.3, )"
+            },
+            "mongodb.driver": {
+              "target": "Package",
+              "version": "[2.17.1, )"
+            },
+            "mongodb.driver.gridfs": {
+              "target": "Package",
+              "version": "[2.17.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

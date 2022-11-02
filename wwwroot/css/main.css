@@ -1,0 +1,42 @@
+﻿.contentElement {
+    height: 150px;
+    opacity: 0;
+}
+#contentElementImage {
+    width: 150px;
+}
+#contentElementForm > input, button {
+    width: calc( 100% / 5 );
+    margin: 0;
+}
+#addImageButton {
+    width: calc( 80% / 5 );
+}
+.checkBox {
+    height: 0;
+    width: 0;
+    visibility: collapse;
+}
+.checkBoxButton {
+    width: calc( 21% / 2 );
+    padding: 0;
+    margin: 0;
+    float: right;
+}
+#contentElementBackground {
+    display: block;
+    width: calc( 100% - 150px );
+    float: right;
+    height: 100%;
+    background: rgb(147,0,57);
+    background: linear-gradient(217deg, rgba(147,0,57,0) 0%, rgba(166,1,22,0) 26%, rgba(212,0,0,0) 64%, rgba(232,54,0,0) 89%, rgba(255,115,0,0) 100%);
+}
+.mouseEventsFalse {
+    pointer-events: none;
+}
+.deleteElementButton {
+    height: 100%;
+    width: fit-content;
+    float: right;
+    background: none;
+}

@@ -1,0 +1,61 @@
+﻿#mainDiv {
+    width: 30%;
+    margin-left: 35%;
+    margin-top: 100px;
+    background-color: black;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+input[type=email],[type=password],[type=text] {
+    margin-bottom: 8px;
+    width: calc( 95% - 4px );
+    border-radius: 10px;
+    margin-left: calc( 5% / 2 );
+    height: 38px;
+}
+input[type=email],[type=password],[type=text]:focus {
+    outline: none;
+}
+button {
+    background-color: black;
+    width: 100%;
+    height: 50px;
+    border: 0;
+}
+#messageBox {
+    color: rgb(184, 21, 21);
+    margin-left: 15px;
+    margin-right: 15px;
+    word-wrap: normal;
+    margin-bottom: 2px;
+}
+#emailField {
+    margin-top: 15px;
+}
+input.warning {
+    border-width: 2px;
+    border-style: solid;
+    margin-left: calc( (5% - 2px) / 2 );
+    border-color: rgb(184, 21, 21);
+}
+input.correct {
+    border-width: 2px;
+    border-style: solid;
+    margin-left: calc( (5% - 2px) / 2 );
+    border-color: #0da324;
+}
+#loadingCircle {
+    height: 0;
+}
+#menuCaseTrigger {
+    height: 50px;
+}
+#menuCase {
+    height: 0;
+    background-color: black;
+    pointer-events: none;
+}
+.menuButton {
+    height: 100%;
+    opacity: 0;
+    pointer-events: all;
+}
