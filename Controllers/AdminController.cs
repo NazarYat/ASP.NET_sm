@@ -4,8 +4,7 @@ using Microsoft.AspNetCore.Http;
 using ASP.NET_sm.Models;
 using System.Threading.Tasks;
 using System.Linq;
-using System.Text;
-using System.Text.Encodings;
+using Microsoft.AspNetCore.Authorization;
 
 namespace ASP.NET_sm.Controllers
 {
@@ -17,6 +16,7 @@ namespace ASP.NET_sm.Controllers
             _dataBase = dbcontext;
         }
         [HttpPost]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> AddContentElement(
             string name,
             IFormFile image,
@@ -52,6 +52,8 @@ namespace ASP.NET_sm.Controllers
             }
             return new StatusCodeResult( 200 );
         }
+        [HttpPost]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> DeleteContentElement( string name )
         {
             var elements = await _dataBase.GetElements( name );
@@ -67,6 +69,7 @@ namespace ASP.NET_sm.Controllers
                 return Content( "*element with this name doesn't exist" );
             }
         }
+        [HttpGet]
         public async Task<IActionResult> GetImage( string id )
         {
             var image = await _dataBase.GetImage(id);
