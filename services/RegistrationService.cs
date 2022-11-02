@@ -1,13 +1,7 @@
-using System;
-using Microsoft.Extensions.DependencyInjection;
-using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using ASP.NET_sm.Models;
-using Microsoft.AspNetCore.Http;
-using System.Text;
 using System.Security.Cryptography;
 
 namespace ASP.NET_sm.Services
@@ -21,7 +15,6 @@ namespace ASP.NET_sm.Services
         {
             database = dbcontext;
         }
-        [HttpPost]
         public async Task<IActionResult> Register( string email, string password )
         {
             var users = database.GetUsers( email );
@@ -65,7 +58,6 @@ namespace ASP.NET_sm.Services
 
             return salt;
         }
-        [HttpPost]
         public async Task< IActionResult > DeleteAccount( string email )
         {
             var users = await database.GetUsers( email );

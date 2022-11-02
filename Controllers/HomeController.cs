@@ -82,8 +82,18 @@ namespace ASP.NET_sm.Controllers
         }
         [HttpPost]
         public async Task< IActionResult > DeleteAccount( string email ) {
-            await _registrator.DeleteAccount( email );
-            return await Exit();
+            var emailsMatch = false;
+            foreach ( var claim in this.HttpContext.User.Claims )
+            {
+                emailsMatch = claim.Value == email;
+                if ( emailsMatch ) break;
+            }
+            if ( emailsMatch )
+            {
+                await _registrator.DeleteAccount( email );
+                return await Exit();
+            }
+            return new StatusCodeResult( 400 );
         }
         [HttpGet]
         public IActionResult Register()
